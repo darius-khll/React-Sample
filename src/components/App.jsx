@@ -41,10 +41,9 @@ class App extends Component {
     }
 
     render() {
-        console.log('this.props', this.props);
         return (
             <div>
-                {this.state.wow} <br />
+                <b style={{ color: 'red' }}>{this.state.wow}</b> <br />
                 <input type="text" onChange={ev => this.setState({ wow: ev.target.value })} />
                 <button onClick={() => this.addReminder()}>Add Reminder</button>
                 {this.renderReminders()}
