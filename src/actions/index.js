@@ -5,8 +5,6 @@ export const addReminder = (text) => {
         type: ADD_REMINDER,
         text
     };
-
-    console.log('action in reminder', action);
     return action;
 }
 
@@ -15,8 +13,6 @@ export const deleteReminder = (id) => {
         type: DELETE_REMINDER,
         id
     };
-
-    console.log('deleting in actions', action);
     return action;
 }
 
