@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { clearReminders } from '../actions'
 
 class Clock extends Component {
     constructor(props) {
@@ -21,10 +23,16 @@ class Clock extends Component {
                     return (<div key={key}>{data}</div>);
                 })}
 
-                <button onClick={() => this.changeParentState()}>change parent state</button>
+                <button onClick={() => {this.changeParentState(); this.props.clearReminders();}}>change parent state</button>
             </div>
         )
     }
 }
 
-export default Clock;
+function mapStateToProps(state) {
+    return {
+        reminders: state
+    }
+}
+
+export default connect(mapStateToProps, { clearReminders })(Clock);
