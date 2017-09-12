@@ -4,7 +4,10 @@ import {observable} from 'mobx';
 import {observer} from "mobx-react";
 
 let time = observable({
-    val: new Date()
+    val: new Date(),
+    parent: {
+        child: 1
+    }
 });
 
 // @observer
@@ -15,6 +18,7 @@ const Signup = observer(class Signup extends Component {
 
          setInterval(() => {
             time.val = new Date();
+            time.parent.child++;
         }, 1000);
     }
 
@@ -30,6 +34,8 @@ const Signup = observer(class Signup extends Component {
                 <img height="100" width="100" src={img} /> <br />
                 <button onClick={() => this.changeSrc()}>Change</button> <br />
                 <Link to="/App">App</Link>
+
+                <h1>{time.parent.child}</h1>
             </div>
 
         )
