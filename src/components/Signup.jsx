@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import {observable} from 'mobx';
 import {observer} from "mobx-react";
 
+import Test from './Test';
+
 let time = observable({
     val: new Date(),
     parent: {
@@ -36,6 +38,8 @@ const Signup = observer(class Signup extends Component {
                 <Link to="/App">App</Link>
 
                 <h1>{time.parent.child}</h1>
+
+                <Test store={time} />
             </div>
 
         )
