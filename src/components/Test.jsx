@@ -13,13 +13,13 @@ const Test = observer(class Test extends Component {
         this.store = this.props.store;
     }
     changePatentState() {
-        this.store.parent.child = 0;
+        this.store.child = 0;
     }
 
     render() {
         return (
             <div>
-                <h4>Test Component {this.store.parent.child}</h4>
+                <h4>Test Component {this.store.child}</h4>
                 <button onClick={e => this.changePatentState()}>Update Parent</button>
             </div>
         )

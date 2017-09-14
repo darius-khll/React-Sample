@@ -39,7 +39,7 @@ const Signup = observer(class Signup extends Component {
 
                 <h1>{time.parent.child}</h1>
 
-                <Test store={time} />
+                <Test store={time.parent} />
             </div>
 
         )
