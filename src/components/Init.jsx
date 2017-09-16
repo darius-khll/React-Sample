@@ -6,7 +6,7 @@ class Init extends Component {
         return (
             <div>
                 <h1>Home</h1>
-                <Link to="/app">App</Link> <br />
+                <Link to="/app/1">App</Link> <br />
                 <Link to="/signup">Signup</Link>
             </div>
         )
