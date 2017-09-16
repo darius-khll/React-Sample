@@ -6,11 +6,11 @@ import { addReminder, deleteReminder, clearReminders } from '../actions'
 //event.target.value - event.key
 
 class App extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
-            wow: ''
+            wow: '',
+            id: props.match.params.id
         };
     }
 
@@ -43,6 +43,7 @@ class App extends Component {
     render() {
         return (
             <div>
+                <h1>Id is {this.state.id}</h1>
                 <b style={{ color: 'red' }}>{this.state.wow}</b> <br />
                 <input type="text" onChange={ev => this.setState({ wow: ev.target.value })} />
                 <button onClick={() => this.addReminder()}>Add Reminder</button>
