@@ -20,7 +20,7 @@ ReactDOM.render(
         <Router>
             <div>
                 <Route exact path="/" component={Init} />
-                <Route path="/App" component={App} />
+                <Route path="/App/:id" component={App} />
                 <Route path="/Signup" component={Signup} />
             </div>
         </Router>
