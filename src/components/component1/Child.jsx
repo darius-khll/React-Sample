@@ -8,6 +8,7 @@ class Child extends Component {
     render() {
         return (
             <div>
+                {/* binding change data functions */}
                 <button onClick={e => this.props.changeData()}>Child should change Data</button>
             </div>
         )
