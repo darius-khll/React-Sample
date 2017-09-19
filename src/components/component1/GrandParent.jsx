@@ -9,7 +9,7 @@ class GrandParent extends Component {
             data: 0
         }
 
-        //should using javascript bind for having child components to call that with current state
+        //javascript bind for having child components to call that with current state (important)
         this.changeData = this.changeData.bind(this);
     }
 
