@@ -20,7 +20,8 @@ class Init extends Component {
                 <input type="number" onChange={e => this.onInputchange(e)} />
                 <br />
                 <Link to={`/app/${this.state.appId}`}>App</Link> <br />
-                <Link to="/signup">Signup</Link>
+                <Link to="/signup">Signup</Link> <br />
+                <Link to="/grandParent">Grand Parent</Link>
             </div>
         )
     }
