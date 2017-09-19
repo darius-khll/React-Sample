@@ -8,7 +8,7 @@ class Child extends Component {
     render() {
         return (
             <div>
-                <button onClick={e => this.props.changeData()}>Child: change Data</button>
+                <button onClick={e => this.props.changeData()}>Child should change Data</button>
             </div>
         )
     }
